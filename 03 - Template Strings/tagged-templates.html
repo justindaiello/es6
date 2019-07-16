@@ -14,9 +14,9 @@
   function highlight(strings, ...values) {
     let str = '';
     strings.forEach((string, i) => {
-      str += `${string} <span contenteditable class="hl">${values[i] || ''}</span>`;
+      str += `${string} <span class="hl">${values[i] || ''}</span>`
     });
-    return str;
+    return str
   }
 
   const name = 'Snickers';
