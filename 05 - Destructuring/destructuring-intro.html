@@ -14,26 +14,29 @@
     twitter: '@wesbos'
   };
 
-  const { first, last, twitter } = person;
+  const { first, last } = person;
+  console.log(first, last);
 
-  const wes = {
-    first: 'Wes',
-    last: 'Bos',
+  const me = {
+    first: 'Justin',
+    last: 'Aiello',
     links: {
       social: {
-        twitter: 'https://twitter.com/wesbos',
-        facebook: 'https://facebook.com/wesbos.developer',
+        twitter: "twitter.com",
+        facebook: "facebook.com",
       },
       web: {
-        blog: 'https://wesbos.com'
+        blog: "blog.com",
       }
     }
-  };
+  }
+  
+  const { twitter: tweet, facebook: fb } = me.links.social; //this renames the keys to a new variable
+  console.log(tweet, fb);
 
-  const { twitter: tweet, facebook: fb } = wes.links.social;
-
-  const settings = { width: 300, color: 'black' }  // height, fontSize
-  const { width = 100, height = 100, color = 'blue', fontSize = 25} = settings;
+  const settings = { width: 300, color: 'black' } //need height and fontsize
+  const { width, height = 100, color, fontsize = 25 } = settings;
+  console.log(width, height, color, fontsize);
 
 </script>
 </body>

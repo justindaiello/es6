@@ -16,15 +16,21 @@ const model = 'x5';
 const colour = 'Royal Blue';
 
 // .startsWith()
+console.log(course.startsWith('RFB'));
+console.log(course.startsWith('rfb'));
+console.log(flightNumber.startsWith('AC'));
+console.log(flightNumber.startsWith('AC', 3)); //skip 3 chars then begin search
 
 // .endsWith()
+console.log(flightNumber.endsWith('jz'));
+console.log(accountNumber.endsWith('RT', 11)) //takes first 11 chars
 
 // .includes()
+console.log(flightNumber.includes('AC'))
 
 // .repeat()
-
-function leftPad(str, length = 20) {
-  return `→ ${' '.repeat(length - str.length)}${str}`;
+function leftPad(string, length = 20) {
+  return `-> ${' '.repeat(length - string.length)}${string}`;
 }
 
 console.log(leftPad(make));
