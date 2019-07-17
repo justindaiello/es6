@@ -18,14 +18,14 @@
   //   }, 500);
   // });
 
-  // Promise
-  //   .all([weather, tweets])
+  // Promise.all([weather, tweets])
   //   .then(responses => {
   //     const [weatherInfo, tweetInfo] = responses;
   //     console.log(weatherInfo, tweetInfo)
-  //   });
+  //   })
 
-  const postsPromise = fetch('https://wesbos.com/wp-json/wp/v2/posts');
+
+  const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
   const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
 
   Promise
@@ -35,7 +35,7 @@
     })
     .then(responses => {
       console.log(responses);
-    });
+    })
 
 </script>
 </body>

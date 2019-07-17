@@ -8,17 +8,14 @@
 <script>
   const p = new Promise((resolve, reject) => {
     setTimeout(() => {
-      reject(Error('Err wes isn\'t cool'));
-    }, 1000);
+      //wrap in Error object for better logging on where error occured
+      resolve(Error('Err Justin is not cool')); //could also use resolve here instead of reject
+    }, 2000)
   });
 
   p
-    .then(data => {
-      console.log(data);
-    })
-    .catch(err => {
-      console.error(err);
-    });
+    .then(data => { console.log(data) })
+    .catch(err => { console.error(err) })
 
 </script>
 </body>
