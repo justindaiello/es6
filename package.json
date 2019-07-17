@@ -1,0 +1,24 @@
+{
+  "name": "es6.io",
+  "version": "1.0.0",
+  "description": "![ES6 for Everyone](https://es6.io/images/es6-facebook-share.png?cool=yah)",
+  "main": "data.js",
+  "dependencies": {
+    "liveserver": "^0.1.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justindaiello/es6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justindaiello/es6/issues"
+  },
+  "homepage": "https://github.com/justindaiello/es6#readme"
+}
