@@ -10,15 +10,16 @@
   const last = 'bos';
   const age = 2;
   const breed = 'King Charles Cav';
+  //if value and key are the same you can just type it once
   const dog = {
-    firstName: first,
-    last,
-    age,
+    first, 
+    last, 
+    age, 
     breed,
-    pals: ['Hugo', 'Sunny']
-  };
+  }
   console.log(dog);
 
+  //methods dont need to do create: function() {} anymore
   const modal = {
     create(selector) {
 
@@ -26,34 +27,34 @@
     open(content) {
 
     },
-    close(goodbye) {
+    close(bye) {
 
-    }
+    },
   }
-
-  function invertColor(color) {
-      return '#' + ("000000" + (0xFFFFFF ^ parseInt(color.substring(1),16)).toString(16)).slice(-6);
-  }
-
+  
+  //computed property names
   const key = 'pocketColor';
   const value = '#ffc600';
+  const black = 'black';
 
   const tShirt = {
     [key]: value,
-    [`${key}Opposite`]: invertColor(value)
-  };
+    [`${key}Opposite`]: black
+  }
+  console.log(tShirt);
 
   const keys = ['size', 'color', 'weight'];
-  const values = ['medium', 'red', 100];
+  const values = ['medium', 'green', 100];
 
   const shirt = {
     [keys.shift()]: values.shift(),
     [keys.shift()]: values.shift(),
     [keys.shift()]: values.shift(),
   }
-  console.log(shirt);
 
+console.log(shirt);
 
+  
 </script>
 </body>
 </html>
