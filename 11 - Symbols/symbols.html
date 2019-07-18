@@ -6,22 +6,25 @@
 </head>
 <body>
 <script>
-  const wes = Symbol('Wes');
-  const person = Symbol('Wes');
+  const wes = Symbol('Wes'); //the string is a descriptor not a value in this case
+  const person = Symbol('Wes'); //this is unique from up above
 
+
+  //symbols are not ennumerable. Cannot loop over them
   const classRoom = {
-    [Symbol('Mark')] : { grade: 50, gender: 'male' },
-    [Symbol('olivia')]: { grade: 80, gender: 'female' },
-    [Symbol('olivia')]: { grade: 80, gender: 'female' },
-  };
-
-  for (const person in classRoom) {
-    console.log(person);
+    [Symbol('Mark')]: {grade: 50, gender: 'Male'},
+    [Symbol('Olivia')]: {grade: 80, gender: 'Female'},
+    [Symbol('Olivia')]: {grade: 80, gender: 'Female'},
   }
 
   const syms = Object.getOwnPropertySymbols(classRoom);
   const data = syms.map(sym => classRoom[sym]);
   console.log(data);
+
+
+  
+  
+
 
 </script>
 </body>
