@@ -8,7 +8,9 @@
 <script>
 
   function ajax(url) {
-    fetch(url).then(data => data.json()).then(data => dataGen.next(data))
+    fetch(url)
+      .then(data => data.json())
+      .then(data => dataGen.next(data))
   }
 
   function* steps() {
@@ -18,7 +20,7 @@
 
     console.log('fetching wes');
     const wes = yield ajax('https://api.github.com/users/wesbos');
-    console.log(wes);
+    console.log(wes.login);
 
     console.log('fetching fat joe');
     const fatJoe = yield ajax('https://api.discogs.com/artists/51988');
