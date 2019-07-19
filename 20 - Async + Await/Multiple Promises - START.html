@@ -7,12 +7,27 @@
 
 <body>
   <script>
-    async function go() {
-      const p1 = fetch('https://api.github.com/users/wesbos');
-      const p2 = fetch('https://api.github.com/users/stolinski');
+    // async function go() {
+    //   const promise1 = fetch('https://api.github.com/users/wesbos') //.then(r => r.json());
+    //   const promise2 = fetch('https://api.github.com/users/stolinski') //.then(r => r.json());
+    //   //wait for both promises to come back
+    //   const res = await Promise.all([promise1, promise2]);
+    //   const dataPromises = res.map(r => r.json())
+    //   const [wes, scott] = await Promise.all(dataPromises);
+    //   console.log(wes, scott);
+    // }
+
+    // go();
+
+    const getData = async (names) => {
+      const promises = names.map(name => fetch(`https://api.github.com/users/${name}`)
+        .then(r => r.json()));
+        const [wes, scott] = await Promise.all(promises);
+        console.log(wes, scott);
     }
 
-    go();
+    getData(['wesbos', 'stolinski'])
+    
   </script>
 </body>
 
