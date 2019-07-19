@@ -9,6 +9,20 @@
 
 <body>
   <script>
+      // fetch('https://api.github.com/users/justindaiello')
+      //   .then(res => res.json())
+      //   .then(res => console.log(res))
+      //   .catch(err => console.log('Ohh noooo', error))
+    
+    const video = document.querySelector('.handsome');
+
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(mediaStream => {
+        video.srcObject = mediaStream;
+        video.load();
+        video.play();
+      })
+      .catch(err => console.log(err))
 
   </script>
 </body>

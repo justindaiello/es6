@@ -7,13 +7,10 @@
 <body>
 <script>
   function* listPeople() {
-    let i = 0;
-    yield i;
-    i++;
-    yield i;
-    i++;
-    yield i;
-  }
+    yield 'Justin';
+    yield 'Archer';
+    yield 'Ellie';
+  };
 
   const people = listPeople();
 
@@ -28,14 +25,12 @@
   ];
 
   function* loop(arr) {
-    console.log(inventors);
     for (const item of arr) {
       yield item;
     }
   }
 
   const inventorGen = loop(inventors);
-
 
 </script>
 </body>
